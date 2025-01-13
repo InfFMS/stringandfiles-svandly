@@ -4,3 +4,9 @@
 # Общее количество слов во всем тексте файла.
 # Общее количество символов (включая пробелы).
 # Выведите полученную статистику на экран.
+with open('task1.txt', encoding='utf-8') as f:
+    f.read()
+    s1 = str(f)
+print(len(s1))
+worlds = str(f.split())
+print(len(worlds))
