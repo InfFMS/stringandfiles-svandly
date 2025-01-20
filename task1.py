@@ -5,8 +5,13 @@
 # Общее количество символов (включая пробелы).
 # Выведите полученную статистику на экран.
 with open('task1.txt', encoding='utf-8') as f:
-    f.read()
-    s1 = str(f)
-print(len(s1))
-worlds = str(f.split())
-print(len(worlds))
+s=f.read()
+print(len(s))
+worlds = s.split(' ')
+points = s.count('.')
+dash = s.count('—')
+g = len(worlds)
+j = g - points - dash
+strings = s.count('\n')
+print(j)
+print(strings + 1)
