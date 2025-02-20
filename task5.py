@@ -6,7 +6,7 @@
 #
 # Выведите это слово и длину в консоль.
 
-with open('task5.txt', encoding='utf-8') as f:
+with open('task5.txt', 'r', encoding='utf-8') as f:
     s = f.read()
     # print(len(s))
     w = s.split(' ')
@@ -17,8 +17,13 @@ with open('task5.txt', encoding='utf-8') as f:
             max = d
             slovo = i
 
-file = open('newfile.txt', 'w')
-file.write(slovo, max)
-file.close()
+
+with open("newfile.txt", "w", encoding="utf-8") as newfile:
+    newfile.write("Самое длинное слово: ")
+    newfile.write(f"{slovo}\n")
+    newfile.write("Его длина: ")
+    newfile.write(f"{max}\n")
+
 print(slovo)
 print(max)
+
